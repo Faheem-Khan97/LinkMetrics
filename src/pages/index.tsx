@@ -55,6 +55,7 @@ const Home: NextPage<LoginProps> = ({ isAuthorized, userID }) => {
               src={"/dashboardn.png"}
               width="1100"
               height="260"
+              loading="eager"
             />
           </Flex>
         </Flex>

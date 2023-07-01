@@ -33,6 +33,7 @@ export default async function handler(
           user_id: userId,
           long_url: link,
           short_url: newdata.data.shortUrl,
+          short_link_id: newdata.data.id,
         })
         .select()
         .single();
