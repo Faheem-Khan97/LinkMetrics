@@ -26,7 +26,6 @@ export default async function handler(
           },
         }
       );
-      console.log(newdata.data.shortUrl, "gfdfghjhgfdfghjhgf");
       const { data, error } = await supabase
         .from("link")
         .insert({

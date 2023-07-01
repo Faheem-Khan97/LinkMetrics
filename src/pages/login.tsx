@@ -39,16 +39,7 @@ const LoginPage: NextPage<LoginProps> = ({ isAuthorized }) => {
 export const getServerSideProps: GetServerSideProps<LoginProps> = async (
   context: GetServerSidePropsContext
 ) => {
-  // const authToken = context.req.cookies["psg_auth_token"];
-  // console.log({ authToken });
-  // const req = {
-  //   headers: {
-  //     authorization: `Bearer ${authToken}`,
-  //   },
-  // };
   const loginProps = await getAuthenticatedUserFromSession(context.req);
-
-  console.log({ loginProps }, "login servesideprops");
 
   return {
     props: {

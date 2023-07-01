@@ -69,7 +69,6 @@ const AddLink: NextPage<DashboardProps> = ({
     async function getLinksAsync() {
       try {
         const resp = await getLinks(userId, 4);
-        console.log(resp.data);
         setShortedLinks(resp.data);
         setIsLinkTableLoading(false);
       } catch (error) {}
@@ -112,7 +111,6 @@ const AddLink: NextPage<DashboardProps> = ({
         }
       }
     } catch (error: any) {
-      console.log({ error });
       console.error(`An error occurred:${error?.message}`, error);
     } finally {
       setIsShotening(false);
@@ -166,7 +164,6 @@ export const getServerSideProps: GetServerSideProps<DashboardProps> = async (
       userId = userID;
       const { email, phone, user_metadata } = await passage.user.get(userID);
       const identifier = email ? email : phone;
-      console.log({ user_metadata });
       return {
         props: {
           isAuthorized: true,

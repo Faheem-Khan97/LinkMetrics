@@ -9,10 +9,8 @@ export default async function handler(
   const reqMethod = req.method;
   if (reqMethod === "POST") {
     const { offset, limit, userId, filterText, asc } = req.body;
-    console.log({ offset, limit, userId, filterText, asc });
     const { supabase } = getSupabase(userId);
     if (limit > 0) {
-      console.log("limit> 0");
       const { data, error } = await supabase
         .from("link")
         .select()

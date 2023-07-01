@@ -28,8 +28,6 @@ const MyForm: React.FC<addFormProps> = ({ submitCallback, loading }) => {
     event?.preventDefault();
   };
 
-  console.log({ errors });
-
   return (
     <Box minWidth="400px" mx="auto" mt="4" maxWidth="600">
       <Flex

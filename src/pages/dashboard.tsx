@@ -62,7 +62,6 @@ const Dashboard: NextPage<DashboardProps> = ({
     async function getLinksAsync() {
       try {
         const resp = await getLinks(userId, 0);
-        console.log(resp.data);
         setShortedLinks(resp.data);
         setIsLinkTableLoading(false);
       } catch (error) {}
@@ -81,9 +80,7 @@ const Dashboard: NextPage<DashboardProps> = ({
 
   const handleSearch = debounce(async (text: string) => {
     setIsLinkTableLoading(true);
-    console.log("Searching for:", text);
     const resp = await getLinks(userId, 0, text, selectedOption.value);
-    console.log(resp.data);
     setShortedLinks(resp.data);
     setIsLinkTableLoading(false);
   }, 600);
@@ -98,13 +95,11 @@ const Dashboard: NextPage<DashboardProps> = ({
     event: React.ChangeEvent<HTMLSelectElement>
   ) => {
     const value = event.target.value;
-    console.log({ value });
     const option = options.find((opt) => opt.value === value);
     if (option) {
       setSelectedOption(option);
       setIsLinkTableLoading(true);
       const resp = await getLinks(userId, 0, "", option.value);
-      console.log(resp.data);
       setShortedLinks(resp.data);
       setIsLinkTableLoading(false);
     }

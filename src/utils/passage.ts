@@ -12,7 +12,6 @@ export const getAuthenticatedUserFromSession = async (
     cookies: NextApiRequestCookies;
   }
 ) => {
-  console.log(req.cookies["psg_auth_token"]);
   try {
     const userID = await passage.authenticateRequest(req);
     if (userID) {
