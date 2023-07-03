@@ -68,6 +68,7 @@ export interface LinkData {
   short_url: string;
   title: string;
   user_id: string;
+  short_link_id: string;
 }
 
 export type Option = {
@@ -78,4 +79,18 @@ export type Option = {
 export interface HeaderProps {
   username: string;
   signOut: () => void;
+}
+
+export interface ReusableTableProps {
+  data: LinkData[];
+}
+
+export interface AnalyticsI {
+  totalClicks?: number;
+  uniqueVisitors?: number;
+}
+
+export interface AnalyticsRowProps {
+  label: String;
+  value: number;
 }
