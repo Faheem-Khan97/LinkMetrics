@@ -1,35 +1,56 @@
+
+### How to navigate 
+
+1. The Landing page. How minimal and clean it looks 🔥
+
+![Landing page](https://cdn.hashnode.com/res/hashnode/image/upload/v1688208167473/2dedf0a7-86a5-4838-9dc9-56084d791ebe.png?auto=compress,format&format=webp)
+
+2. Register on the application. ( to get here, Cllick on `Get Started` button on the landing page )
+
+   
+![Registration Flow pages](https://cdn.hashnode.com/res/hashnode/image/upload/v1688206077542/feee7c7a-c73a-4829-95d3-f3fe2edb65bd.png?auto=compress,format&format=webp)
+
+3. Shorten Link -- Paste a lonk link, give a title and hit enter - Newly added links are shown at the bottom
+
+   
+![Shoten and Add links page](https://cdn.hashnode.com/res/hashnode/image/upload/v1688197950726/3e8b191e-cf17-46ba-9fde-233eafe27b37.png)
+
+
+4. Dashboard View
+
+![Full Dashboard with search and filter](https://cdn.hashnode.com/res/hashnode/image/upload/v1688198023296/96795165-0454-4d88-9fd6-86ad26d55508.png?auto=compress,format&format=webp)
+
+
+5. View Link Analytics - Click on Analytics button to view this.
+
+
+![Link Analytics](https://cdn.hashnode.com/res/hashnode/image/upload/v1690840141247/8a3fdaeb-7efa-402a-b389-48170ef6b807.png?auto=compress,format&format=webp)
+
+
+
+## How To Run the Application
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+1. Clone the repository - Run below command in the terminal
 
-First, run the development server:
+   ```
+   git clone https://github.com/Faheem-Khan97/LinkMetrics
+   ```
+2. Navigate inside the folder
+   ```
+   cd LinkMetrics
+   ```
+3. Install dependencies
+  ```
+  npm i
+  ```
+4. Go to [Reblandly.com](https://www.rebrandly.com/) - Get you API keys. Paste it inside `.env` file at the root of the directory. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+5. Start the app
+   ```
+   npm run dev
+   ```
 
 ## Deploy on Vercel
 
